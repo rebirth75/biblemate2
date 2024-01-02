@@ -51,6 +51,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
                     ${PROJECT_SOURCES}
                     ${QM_FILES}
     )
+    install(TARGETS biblemate2 DESTINATION bin)
+
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET biblemate2 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
@@ -66,6 +68,7 @@ else()
             ${PROJECT_SOURCES}
             ${QM_FILES}
         )
+
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
@@ -73,6 +76,8 @@ else()
             ${PROJECT_SOURCES}
             ${QM_FILES}
         )
+        install(TARGETS biblemate2 DESTINATION bin)
+
     endif()
 
     #qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
