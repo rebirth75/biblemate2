@@ -20,7 +20,7 @@ void Book::addVerse(Verse v)
         if (this->num_cap!=last.chap) this->num_cap++;
      }
 }
-Verse* Book::getVerse(int cap, int v)
+/*Verse* Book::getVerse(int cap, int v)
 {
     for (Verse verse:this->verses){
         if (verse.chap==cap&&verse.verse_num==v){
@@ -28,7 +28,7 @@ Verse* Book::getVerse(int cap, int v)
         }
     }
     return NULL;
-}
+}*/
 QStringList Book::getStringList()
 {
     QStringList stringList;

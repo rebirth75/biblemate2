@@ -13,7 +13,7 @@ public:
     int num_cap;
 
     void addVerse(Verse v);
-    Verse* getVerse(int cap,int v);
+    //Verse* getVerse(int cap,int v);
     QStringList getStringList();
 
 private:
